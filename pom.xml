@@ -59,7 +59,7 @@
 				<version>2.44.4</version>
 				<configuration>
 				<!-- Spotless Formatter  -->
-					 <ratchetFrom>origin/main</ratchetFrom>
+					 
 					 <lineEndings>UNIX</lineEndings>
 					<encoding>UTF-8</encoding>
 					<formats>
