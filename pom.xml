@@ -58,8 +58,8 @@
 				<artifactId>spotless-maven-plugin</artifactId>
 				<version>2.44.4</version>
 				<configuration>
-				<!-- Spotless Formatter 
-					 <ratchetFrom>origin/main</ratchetFrom> -->
+				<!-- Spotless Formatter  -->
+					 <ratchetFrom>origin/main</ratchetFrom>
 					<formats>
 						<format>
 							<includes>
