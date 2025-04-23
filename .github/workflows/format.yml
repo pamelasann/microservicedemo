@@ -18,6 +18,8 @@ jobs:
           distribution: "temurin"
           java-version: "11"
 
+      - name: Clean mvn
+        run: mvn clean
+
       - name: Run Spotless Check
-        id: spotless_check
         run: mvn spotless:check

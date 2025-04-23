@@ -58,9 +58,10 @@
 				<artifactId>spotless-maven-plugin</artifactId>
 				<version>2.44.4</version>
 				<configuration>
-				<lineEndings>UNIX</lineEndings>
 				<!-- Spotless Formatter  -->
 					 <ratchetFrom>origin/main</ratchetFrom>
+					 <lineEndings>UNIX</lineEndings>
+					<encoding>UTF-8</encoding>
 					<formats>
 						<format>
 							<includes>
