@@ -58,24 +58,24 @@
 				<artifactId>spotless-maven-plugin</artifactId>
 				<version>2.44.4</version>
 				<configuration>
-					<!-- to enforce formatting gradually and only format files which have changed since origin/main uncomment:
-					<ratchetFrom>origin/main</ratchetFrom> -->
+				<!-- Spotless Formatter 
+					 <ratchetFrom>origin/main</ratchetFrom> -->
 					<formats>
-					<format>
-						<includes>
-						<include>.gitattributes</include>
-						<include>.gitignore</include>
-						<include>HELP.md</include>
-						</includes>
-						<!-- define the steps to apply to those files -->
-						<trimTrailingWhitespace/>
-						<endWithNewline/>
-						<indent>
-						<tabs>true</tabs>
-						<spacesPerTab>4</spacesPerTab>
-						</indent>
-					</format>
+						<format>
+							<includes>
+								<include>.git*</include>
+							</includes>
+							<trimTrailingWhitespace/>
+							<endWithNewline/>
+							<indent>
+							<tabs>true</tabs>
+							<spacesPerTab>4</spacesPerTab>
+							</indent>
+						</format>
+
+
 					</formats>
+
 					<java>
 					<googleJavaFormat>
 						<version>1.17.0</version>
@@ -83,14 +83,16 @@
 						<reflowLongStrings>true</reflowLongStrings>
 						<formatJavadoc>false</formatJavadoc>
 					</googleJavaFormat>
-
-					<!-- make sure every file has the following copyright header.
-						optionally, Spotless can set copyright years by digging
-						through git history (see "license" section below) -->
-					<licenseHeader>
-						<content>/* (C)2025 */</content>  <!-- or <file>${project.basedir}/license-header</file> -->
-					</licenseHeader>
 					</java>
+
+
+					<markdown>
+						<includes>
+							<include>*.md</include>
+						</includes>
+						<flexmark/>
+					</markdown>
+
 				</configuration>
 			</plugin>
 
